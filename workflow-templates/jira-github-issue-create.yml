@@ -10,6 +10,7 @@ permissions:
 jobs:
   create-issue:
     runs-on: ubuntu-latest
+    if: github.repository_owner == 'pando-develop'
 
     steps:
       - name: Jira Login
@@ -24,7 +25,7 @@ jobs:
         with:
           project: GOOD
           issuetype: Task
-          summary: '[GH] ${{ github.event.issue.title }}'
+          summary: "[GH] ${{ github.event.issue.title }}"
           description: |
             ▶ 작성자: ${{ github.event.issue.user.login }}
             ▶ URL: ${{ github.event.issue.html_url }}

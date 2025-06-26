@@ -9,6 +9,7 @@ on:
 jobs:
   jira-transition:
     runs-on: ubuntu-latest
+    if: github.repository_owner == 'pando-develop'
 
     steps:
       - name: Checkout code
@@ -18,7 +19,7 @@ jobs:
         id: find_issue
         uses: atlassian/gajira-find-issue-key@v3
         with:
-          regex: '[A-Z]+-[0-9]+'
+          regex: "[A-Z]+-[0-9]+"
 
       - name: Jira Login
         uses: atlassian/gajira-login@v3
