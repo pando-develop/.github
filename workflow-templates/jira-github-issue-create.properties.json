@@ -1,0 +1,4 @@
+{
+  "name": "Jira GitHub Issue Create",
+  "description": "Creates a Jira issue from a GitHub issue"
+}

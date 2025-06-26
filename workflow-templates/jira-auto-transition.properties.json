@@ -1,0 +1,4 @@
+{
+  "name": "Jira Issue Auto-Transition",
+  "description": "Automatically transitions Jira issues based on the branch name"
+}
