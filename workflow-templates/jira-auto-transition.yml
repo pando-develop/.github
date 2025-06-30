@@ -19,7 +19,8 @@ jobs:
         id: find_issue
         uses: atlassian/gajira-find-issue-key@v3
         with:
-          regex: "[A-Z]+-[0-9]+"
+          string: ${{ github.event.head_commit.message }}
+          from: commits
 
       - name: Jira Login
         uses: atlassian/gajira-login@v3
